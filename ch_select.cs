@@ -51,5 +51,21 @@ public class ch7_select : MonoBehaviour
 			ch5_heart.gameObject.SetActive(false);
 			ch6_heart.gameObject.SetActive(true);
 		}
+		else if (ch5_heart.gameObject.activeSelf && Keyboard.current.upArrowKey.wasPressedThisFrame)
+		{
+			ch5_heart.gameObject.SetActive(false);
+			ch4_heart.gameObject.SetActive(true);
+		}
+		if (Keyboard.current.upArrowKey.wasPressedThisFrame && ch4_heart.gameObject.activeSelf)
+		{
+			ch4_heart.gameObject.SetActive(false);
+			ch3_heart.gameObject.SetActive(true);
+		}
+		else if (ch4_heart.gameObject.activeSelf && Keyboard.current.downArrowKey.wasPressedThisFrame)
+		{
+			ch4_heart.gameObject.SetActive(false);
+			ch5_heart.gameObject.SetActive(true);
+		}
+		
 	}
 }
