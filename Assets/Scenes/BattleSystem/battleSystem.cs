@@ -74,6 +74,8 @@ public class battleSystem : MonoBehaviour
     public void Start()
     {
         // KRIS'S TURN!
+        Debug.Log("So your checking the code, uh?");
+        Debug.Log("Well this stinks.");
         Debug.Log("Kris's Turn.");
         
         noelleUp.gameObject.SetActive(false);
