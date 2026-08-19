@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - SaveFile
+  - chSelectHeart
+  - chSelect
+  - roomTransition
+  - Attack
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Text
+  - Water
+  - UI
+  - Text
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1025058561
+    locked: 0
+  - name: Portal
+    uniqueID: 3830378551
+    locked: 0
+  - name: Player
+    uniqueID: 2749051691
+    locked: 0
+  - name: UI
+    uniqueID: 3742329747
+    locked: 0
+  - name: "text\xF9"
+    uniqueID: 923421471
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []
