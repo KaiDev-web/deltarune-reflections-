@@ -1,3 +1,3 @@
-DELTARUNE REFLECTIONS GITHUB REPOSITORY
+**DELTARUNE REFLECTIONS GITHUB REPOSITORY**
 
-Click on Assets to view all the codes, music, sounds and sprites.
+Click on **Assets** to view scripts, music, sounds and sprites.
