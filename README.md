@@ -1,4 +1,4 @@
-Video Creation
+**Video Creation**
 
 Make videos agentically: Turn your idea into a video using your coding agent.
 Make videos interactively: Edit and animate using drag and drop.
