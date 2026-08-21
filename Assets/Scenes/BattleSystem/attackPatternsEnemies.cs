@@ -17,7 +17,7 @@ public class attackPatternsEnemies : MonoBehaviour
 
     [Header("Discarded Vessel 1")]
     public Transform target;
-    public float speedObject = 3f;
+    public float speedObject = 0f;
 
     public Transform attack;
 
@@ -222,18 +222,23 @@ public class attackPatternsEnemies : MonoBehaviour
         }
 
     }
-
+    public void SetupAttack()
+    {
+        attack.localPosition = new Vector3(4.17f, 0.1885f, 0f);
+    }
+    
     public void MoveAlongHistory()
     {
-        Vector3 targetPoint = positionHistory[0];
+        if (positionHistory == null || positionHistory.Count == 0) return;
 
+        Vector3 targetPoint = positionHistory[0];
+        
         attack.position = Vector3.MoveTowards(attack.position, targetPoint, speedObject * Time.deltaTime);
 
         if (Vector3.Distance(attack.position, targetPoint) < 0.05f)
         {
             positionHistory.RemoveAt(0);
         }
-
     }
 
 }

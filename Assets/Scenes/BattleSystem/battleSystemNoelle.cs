@@ -29,9 +29,7 @@ public class battleSystemNoelle : MonoBehaviour
     public TextMeshProUGUI descriptionItem1;
     public TextMeshProUGUI descriptionItem12;
     public TextMeshProUGUI textComponentN;
-
-
-
+    
     [Header("Check")]
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -127,7 +125,7 @@ public class battleSystemNoelle : MonoBehaviour
             enemy.DamageToEnemy(10);
             FightenemyTextN.gameObject.SetActive(false);
             FightenemyHearthN.gameObject.SetActive(false);
-            attackPatternsEnemies.enabled = true;
+            PassToEnemyTurn();
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame && fightN.gameObject.activeSelf)
         {
@@ -170,7 +168,7 @@ public class battleSystemNoelle : MonoBehaviour
                 ActenemyTextN.gameObject.SetActive(false);
                 noelleUnder.gameObject.SetActive(true);
                 noelleUp.gameObject.SetActive(false);
-                attackPatternsEnemies.ChooseAttack();
+                PassToEnemyTurn();
                 PlaySound();
             }
 
@@ -225,7 +223,7 @@ public class battleSystemNoelle : MonoBehaviour
             PlaySound();
             DefendeenemyHearthN.gameObject.SetActive(false);
             DefendeenemyTextN.gameObject.SetActive(false);
-            attackPatternsEnemies.enabled = true;
+            PassToEnemyTurn();
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame && defenceN.gameObject.activeSelf)
         {
@@ -328,7 +326,7 @@ public class battleSystemNoelle : MonoBehaviour
             noelleUp.gameObject.SetActive(false);
             SpareenemyHearthN.gameObject.SetActive(false);
             SpareenemyTextN.gameObject.SetActive(false);
-            attackPatternsEnemies.enabled = true;
+            PassToEnemyTurn();
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame && spareN.gameObject.activeSelf)
         {
@@ -376,7 +374,6 @@ public class battleSystemNoelle : MonoBehaviour
             attackPatternsEnemies.enabled = true;
             attackPatternsEnemies.ChooseAttack();
         }
-        this.enabled = false;
     }
     public void CureAll(int cure)
     {
@@ -422,8 +419,7 @@ public class battleSystemNoelle : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         attackPatternsEnemies.enabled = true;
         CureAll(1);
-
-        this.enabled = false;
+        
 
     }
     public IEnumerator Act()
