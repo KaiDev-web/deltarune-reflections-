@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class battleSystem : MonoBehaviour
 {
+    [Header("EnemyHealth")] 
+    public EnemyhealthBar enemy;
+    
     [Header("Sound")]
     public AudioSource selectSound;
 
@@ -118,6 +121,7 @@ public class battleSystem : MonoBehaviour
         if (Keyboard.current.zKey.wasPressedThisFrame && FightenemyHearth.gameObject.activeSelf)
         {
             PlaySound();
+            enemy.DamageToEnemy(10);
             StartCoroutine(WaitToNoelle());
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame && fight.gameObject.activeSelf)

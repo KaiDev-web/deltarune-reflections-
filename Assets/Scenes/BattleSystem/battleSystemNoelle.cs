@@ -10,6 +10,9 @@ using UnityEngine.UI;
 
 public class battleSystemNoelle : MonoBehaviour
 {
+    [Header("EnemyHealth")] 
+    public EnemyhealthBar enemy;
+    
     [Header("Sound")]
     public AudioSource selectSound;
 
@@ -121,6 +124,7 @@ public class battleSystemNoelle : MonoBehaviour
         if (Keyboard.current.zKey.wasPressedThisFrame && FightenemyHearthN.gameObject.activeSelf)
         {
             PlaySound();
+            enemy.DamageToEnemy(10);
             FightenemyTextN.gameObject.SetActive(false);
             FightenemyHearthN.gameObject.SetActive(false);
             attackPatternsEnemies.enabled = true;

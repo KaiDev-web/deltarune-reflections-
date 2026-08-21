@@ -5,8 +5,15 @@ using UnityEngine;
 
 public class creditsManager : MonoBehaviour
 {
+    [Header("Game")] 
+    public TextMeshProUGUI game;
+
+    [Header("Thanks")] 
+    public TextMeshProUGUI thanks;
+    
     [Header("Art")] 
     public TextMeshProUGUI art;
+    public TextMeshProUGUI otherArt;
 
     [Header("Music")] 
     public TextMeshProUGUI music;
@@ -16,9 +23,13 @@ public class creditsManager : MonoBehaviour
 
     [Header("Playtest")] 
     public TextMeshProUGUI playtest;
+    public TextMeshProUGUI playtest2;
 
     [Header("Story")] 
     public TextMeshProUGUI story;
+
+    [Header("Traduction IT")] 
+    public TextMeshProUGUI italian;
 
     public void Start()
     {
@@ -27,8 +38,19 @@ public class creditsManager : MonoBehaviour
 
     private IEnumerator CreditsShow()
     {
+        // game
+        
+        game.gameObject.SetActive(true);
+        art.gameObject.SetActive(false);
+        music.gameObject.SetActive(false);
+        story.gameObject.SetActive(false);
+        code.gameObject.SetActive(false);
+        playtest.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(3f);
         // art
         
+        game.gameObject.SetActive(false);
         art.gameObject.SetActive(true);
         music.gameObject.SetActive(false);
         story.gameObject.SetActive(false);
@@ -74,6 +96,47 @@ public class creditsManager : MonoBehaviour
         story.gameObject.SetActive(false);
         code.gameObject.SetActive(false);
         playtest.gameObject.SetActive(true);
+        playtest2.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(3f);
+        
+        // playtest 2
+        
+        art.gameObject.SetActive(false);
+        music.gameObject.SetActive(false);
+        story.gameObject.SetActive(false);
+        code.gameObject.SetActive(false);
+        playtest.gameObject.SetActive(false);
+        playtest2.gameObject.SetActive(true);
+        otherArt.gameObject.SetActive(false);
+        italian.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(4f);
+        
+        // other art and it
+        
+        art.gameObject.SetActive(false);
+        music.gameObject.SetActive(false);
+        story.gameObject.SetActive(false);
+        code.gameObject.SetActive(false);
+        playtest.gameObject.SetActive(false);
+        playtest2.gameObject.SetActive(false);
+        otherArt.gameObject.SetActive(true);
+        italian.gameObject.SetActive(true);
+        thanks.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(4.3f);
+        
+        // thanks
+        
+        art.gameObject.SetActive(false);
+        music.gameObject.SetActive(false);
+        code.gameObject.SetActive(false);
+        playtest.gameObject.SetActive(false);
+        playtest2.gameObject.SetActive(false);
+        otherArt.gameObject.SetActive(false);
+        italian.gameObject.SetActive(false);
+        thanks.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(3f);
         
@@ -83,6 +146,10 @@ public class creditsManager : MonoBehaviour
         music.gameObject.SetActive(false);
         code.gameObject.SetActive(false);
         playtest.gameObject.SetActive(false);
+        playtest2.gameObject.SetActive(false);
+        otherArt.gameObject.SetActive(false);
+        italian.gameObject.SetActive(false);
+        thanks.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(3f);
         
