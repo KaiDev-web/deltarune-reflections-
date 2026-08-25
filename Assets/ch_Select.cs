@@ -53,7 +53,7 @@ public class ch7_select : MonoBehaviour
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame && chPlay.gameObject.activeSelf)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
             PlaySound();
             Debug.Log("Launching CHAPTER 7");
         }

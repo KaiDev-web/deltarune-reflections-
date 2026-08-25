@@ -37,6 +37,11 @@ public class EnemyhealthBar : MonoBehaviour
         float fillValue = (float)health / (float)maxHealth;
         
         StartCoroutine(Text());
+
+        if (health <= 0)
+        {
+            EnemyDead();
+        }
     }
 
     public IEnumerator Text()
@@ -48,18 +53,17 @@ public class EnemyhealthBar : MonoBehaviour
 
     public void EnemyDead()
     {
-        if (health <= 0)
-        {
-            int decideFaith = Random.Range(1, 3);
+        int decideFaith = Random.Range(1, 3);
 
-            if (decideFaith == 1)
-            {
-                killed.LostEnemy();
-            }
-            else if (decideFaith == 2)
-            {
-                killed.KilledEnemy();
-            }
+        if (decideFaith == 1)
+        {
+            killed.LostEnemy();
+            
+        }
+        else if (decideFaith == 2)
+        {
+            killed.KilledEnemy();
+            
         }
     }
 }

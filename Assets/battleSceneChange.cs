@@ -11,6 +11,7 @@ public class ChangeScene : MonoBehaviour
     {
         if (collisione.CompareTag("Player"))
         {
+            PlayerPrefs.SetString("PreviousScene", SceneManager.GetActiveScene().name);
             SceneManager.LoadSceneAsync(NameScene);
         }
     }

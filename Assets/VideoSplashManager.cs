@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 public class VideoSplashManager : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
-    public string nextSceneName = "IntroScene"; 
+    public string nextSceneName = "room2"; 
 
     void Start()
     {
