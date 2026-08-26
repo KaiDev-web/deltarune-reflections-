@@ -10,6 +10,8 @@ public class krisMovement : MonoBehaviour
     private Animator animator;
     private Vector2 lastMoveDirection = Vector2.down;
 
+    public Vector2 LastMoveDirection => lastMoveDirection;
+
     public void Start()
     {
         currentSpeed = walkSpeed;

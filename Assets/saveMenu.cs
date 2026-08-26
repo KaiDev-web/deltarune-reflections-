@@ -3,61 +3,53 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEditor.Timeline;
 using UnityEngine.InputSystem;
 
 public class saveMenu : MonoBehaviour
 {
-    [Header("Kris")] 
-    public krisMovement movementKr;
+    [Header("Kris")] public krisMovement movementKr;
 
-    public BoxCollider2D kris;
     public LayerMask savepointLayer;
-    public Vector2 lastMoveDirection = Vector2.down;
-    
-    public GameObject check;
-    public bool isStanding;
+    public Vector2 lastMoveDirection = Vector2.left;
 
     public Animator krisAnim;
 
-    [Header("Canva and UI")] 
-    public Canvas Save;
+    [Header("Canva and UI")] public Canvas Save;
 
     public TextMeshProUGUI NameKris;
     public TextMeshProUGUI LocationText;
     public TextMeshProUGUI SaveButton;
     public TextMeshProUGUI ReturnButton;
 
-    [Header("Sounds")] 
-    public AudioSource menuScroll;
+    [Header("Sounds")] public AudioSource menuScroll;
 
     public AudioSource saveSound;
+    public AudioSource openSave;
 
-    [Header("Hearts")] 
-    public Image saveHearth;
+    [Header("Hearts")] public Image saveHearth;
 
     public Image returnHearth;
 
-    public void Awake()
-    {
-        kris = GetComponent<BoxCollider2D>();
-    }
-
-    public void Start()
-    {
-        Save.gameObject.SetActive(false);
-    }
-
     public void Update()
     {
-        if (Keyboard.current.zKey.wasPressedThisFrame &&
-            Physics2D.Raycast(transform.position, lastMoveDirection, 1f, savepointLayer))
+
+        if (!Save.gameObject.activeSelf)
         {
-            movementKr.enabled = false;
-            krisAnim.enabled = false;
-            Save.gameObject.SetActive(true);
-            PlayScroll();
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, lastMoveDirection, 1f, savepointLayer);
+
+            if (Keyboard.current.zKey.wasPressedThisFrame && hit.collider != null)
+            {
+                movementKr.enabled = false;
+                krisAnim.enabled = false;
+                Save.gameObject.SetActive(true);
+                saveHearth.gameObject.SetActive(true);
+                returnHearth.gameObject.SetActive(false);
+                SaveButton.color = Color.yellow;
+                ReturnButton.color = Color.white;
+                PlayOpenMenu();
+            }
         }
+
         else
         {
             if (Keyboard.current.rightArrowKey.wasPressedThisFrame && saveHearth.gameObject.activeSelf)
@@ -76,11 +68,35 @@ public class saveMenu : MonoBehaviour
                 ReturnButton.color = Color.white;
                 PlayScroll();
             }
+
+            if (Keyboard.current.zKey.wasPressedThisFrame && returnHearth.gameObject.activeSelf)
+            {
+                movementKr.enabled = true;
+                krisAnim.enabled = true;
+                Save.gameObject.SetActive(false);
+            }
+            else if (Keyboard.current.zKey.wasPressedThisFrame && saveHearth.gameObject.activeSelf)
+            {
+                movementKr.enabled = true;
+                krisAnim.enabled = true;
+                Save.gameObject.SetActive(false);
+                PlaySave();
+            }
         }
     }
 
     public void PlayScroll()
     {
         menuScroll.Play();
+    }
+
+    public void PlayOpenMenu()
+    {
+        openSave.Play();
+    }
+
+    public void PlaySave()
+    {
+        saveSound.Play();
     }
 }
