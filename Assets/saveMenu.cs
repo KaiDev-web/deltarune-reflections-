@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 
 public class saveMenu : MonoBehaviour
 {
+    [Header("Savesystem")] 
+    public string keyX = ("Savepoint X");
+
+    public string keyY = ("Savepoint Y");
+    
+    // Save ITEMS
+    
     [Header("Kris")] public krisMovement movementKr;
 
     public LayerMask savepointLayer;
@@ -30,6 +37,14 @@ public class saveMenu : MonoBehaviour
 
     public Image returnHearth;
 
+    public void Start()
+    {
+        float x = PlayerPrefs.GetFloat(keyX, transform.position.x);
+        float y = PlayerPrefs.GetFloat(keyY, transform.position.y);
+        
+        transform.position = new Vector2(x, y);
+    }
+    
     public void Update()
     {
 
@@ -80,9 +95,24 @@ public class saveMenu : MonoBehaviour
                 movementKr.enabled = true;
                 krisAnim.enabled = true;
                 Save.gameObject.SetActive(false);
+                SavePlayerStats();
                 PlaySave();
             }
         }
+    }
+
+    public void SavePlayerStats()
+    {
+        // Save Position
+        PlayerPrefs.SetFloat(keyX, transform.position.x); 
+        PlayerPrefs.SetFloat(keyY, transform.position.y);
+        
+        PlayerPrefs.Save();
+        Debug.Log("Position Saved: " + transform.position);
+        
+        // Save Items
+        /* idk
+         */
     }
 
     public void PlayScroll()

@@ -1330,17 +1330,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1712141814996069751, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2029340255239228982, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2029340255239228982, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7467774747660299514, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
       propertyPath: m_Name
       value: DialogueSystem
       objectReference: {fileID: 0}
     - target: {fileID: 7467774747660299514, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8623822404447802103, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
       propertyPath: movement
@@ -1457,6 +1465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381822941}
   - component: {fileID: 1381822940}
+  - component: {fileID: 1381822942}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -1576,6 +1585,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1381822942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381822939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd03f52d65154be4db549c63ff003189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
 --- !u!1 &1468133488
 GameObject:
   m_ObjectHideFlags: 0
