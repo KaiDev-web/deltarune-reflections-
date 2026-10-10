@@ -9,6 +9,7 @@ TagManager:
   - chSelect
   - roomTransition
   - Attack
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -18,11 +19,11 @@ TagManager:
   - UI
   - Text
   - SavePoint
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Item
+  - InteractLayer
+  - InteractLayer2
+  - InteractLayer3
+  - InteractLayer4
   - 
   - 
   - 

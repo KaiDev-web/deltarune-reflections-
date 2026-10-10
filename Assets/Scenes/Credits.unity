@@ -3499,7 +3499,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sorion00
+  m_text: Sorion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a4e3ed768c8d914184f0ddb915ea315, type: 2}
   m_sharedMaterial: {fileID: -3061464536645851246, guid: 1a4e3ed768c8d914184f0ddb915ea315, type: 2}
@@ -5269,7 +5269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.08, y: -153.49}
+  m_AnchoredPosition: {x: -13, y: -153.49}
   m_SizeDelta: {x: 188.83, y: 44.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091906951
@@ -5292,7 +5292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sorion00
+  m_text: Sorion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a4e3ed768c8d914184f0ddb915ea315, type: 2}
   m_sharedMaterial: {fileID: -3061464536645851246, guid: 1a4e3ed768c8d914184f0ddb915ea315, type: 2}
@@ -5326,7 +5326,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -9976,7 +9976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sorion00
+  m_text: Sorion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a4e3ed768c8d914184f0ddb915ea315, type: 2}
   m_sharedMaterial: {fileID: -3061464536645851246, guid: 1a4e3ed768c8d914184f0ddb915ea315, type: 2}
@@ -10546,8 +10546,8 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e6eddfe2dccfb894e89d61d993030684, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 0.98
+  m_Volume: 0.76
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0

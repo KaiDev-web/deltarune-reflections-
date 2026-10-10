@@ -7,6 +7,8 @@ public class BreadcrumbFollower : MonoBehaviour
     [Tooltip("GameObject")]
     [SerializeField] private Transform targetToFollow;
 
+    private Animator animator;
+
     [Header("Movimento")]
     [Tooltip("Velocity")]
     [SerializeField] private float moveSpeed = 5f;
@@ -19,6 +21,11 @@ public class BreadcrumbFollower : MonoBehaviour
 
     private List<Vector3> positionHistory = new List<Vector3>();
 
+    public void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+    
     private void Update()
     {
         if (targetToFollow == null) return;
@@ -49,6 +56,7 @@ public class BreadcrumbFollower : MonoBehaviour
             Vector3 targetPoint = positionHistory[0];
 
             transform.position = Vector3.MoveTowards(transform.position, targetPoint, moveSpeed * Time.deltaTime);
+            bool isMoving = true;
 
             if (Vector3.Distance(transform.position, targetPoint) < 0.05f)
             {
@@ -56,5 +64,16 @@ public class BreadcrumbFollower : MonoBehaviour
             }
         }
     }
+    
+    public void ResetAnimationState()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("noelleIdleRight");
+            
+            animator.SetBool("isMoving", true);
+        }
+    }
+    
 }
 

@@ -11,6 +11,8 @@ public class DialogueSystem : MonoBehaviour
     public float textSpeed = 0.05f;
     public MonoBehaviour movement;
 
+    [SerializeField] private OptionMenu options;
+
     private int index;
 
 
@@ -25,6 +27,7 @@ public class DialogueSystem : MonoBehaviour
     void Update()
     {
         movement.enabled = false;
+        options.enabled = false;
         if (Keyboard.current.zKey.wasPressedThisFrame)
         {
             if (textComponent.text == lines[index])
@@ -54,7 +57,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    void NextLine()
+    public void NextLine()
     {
         if (index < lines.Length - 1)
         {
@@ -66,6 +69,7 @@ public class DialogueSystem : MonoBehaviour
         {
             gameObject.SetActive(false);
             movement.enabled = true;
+            options.enabled = true;
         }
 
     }

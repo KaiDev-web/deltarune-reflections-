@@ -26,12 +26,12 @@ public class TransitionBack : MonoBehaviour
 
         while (transition.color.a < 1)
         {
-            alphaVal += 0.02f;
+            alphaVal += 0.4f;
             tmp.a = alphaVal;
 
             transition.color = tmp;
 
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.4f);
         }
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadSceneAsync(currentSceneIndex - 1);

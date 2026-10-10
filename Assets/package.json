@@ -1,0 +1,11 @@
+{
+  "author": "Discord Inc.",
+  "name": "com.discord.game-sdk",
+  "displayName": "Discord Game SDK",
+  "version": "2.5.5",
+  "description": "Discord Game SDK for Unity.",
+  "homepage": "https://discordapp.com/developers/docs/game-sdk/sdk-starter-guide",
+  "publishConfig": {
+    "registry": "https://upm.houraiteahouse.net"
+  }
+}
