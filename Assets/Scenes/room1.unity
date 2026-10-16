@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomTransition
   transitionObject: {fileID: 432025252}
-  transition: {fileID: 1212977509}
+  animator: {fileID: 0}
 --- !u!1 &475570470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1826,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5308656979867984444, guid: cb7eb7bfd7f481943b1febb3f7f1cca5, type: 3}
+  m_Sprite: {fileID: -2112039209454687454, guid: 660745fc2cfc8554ea8d47f3122329e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1846,8 +1846,8 @@ Transform:
   m_GameObject: {fileID: 659211439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.64, y: 0.48, z: 0}
-  m_LocalScale: {x: 0.48666546, y: 0.46748623, z: 1}
+  m_LocalPosition: {x: 9.8412, y: 0.1207, z: 0}
+  m_LocalScale: {x: 1.1686298, y: 1.103361, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1923,17 +1923,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.004858136, y: -0.0013432503}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.72, y: 3.15}
+    oldSize: {x: 0.59, y: 1.13}
     newSize: {x: 1.72, y: 3.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.72, y: 3.15}
+  m_Size: {x: 0.5770129, y: 1.1329086}
   m_EdgeRadius: 0
 --- !u!50 &659211445
 Rigidbody2D:
@@ -2753,7 +2753,7 @@ PrefabInstance:
     - target: {fileID: 8623822404447802103, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
       propertyPath: movement
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 659211442}
     - target: {fileID: 8623822404447802103, guid: 4b19a1b51e9aba84bae9cc41d9042cbc, type: 3}
       propertyPath: lines.Array.size
       value: 9
@@ -3966,7 +3966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomTransition
   transitionObject: {fileID: 432025252}
-  transition: {fileID: 1212977509}
+  animator: {fileID: 0}
 --- !u!1 &1494031579
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,7 +4091,7 @@ MonoBehaviour:
   statsMenu: {fileID: 1963571492}
   select: {fileID: 1574847748}
   move: {fileID: 677666351}
-  kris: {fileID: 0}
+  kris: {fileID: 659211442}
   thaTroupe: {fileID: 1615924057}
   itemNo: {fileID: 138958611}
   equipNo: {fileID: 1743156732}
@@ -5901,7 +5901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1935492048
 MonoBehaviour:
   m_ObjectHideFlags: 0

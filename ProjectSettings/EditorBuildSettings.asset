@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/hometown_room_2.unity
     guid: 4d54cbf637db80f48a5fd5de540a7cdf
   - enabled: 1
+    path: Assets/Scenes/hometown_room_3.unity
+    guid: 2f6e6b7687df36d4fb5018c63e06b861
+  - enabled: 1
     path: Assets/Scenes/BBS_DisVessel.unity
     guid: 64b7f7b8b178bc3468257cf39a544d6e
   - enabled: 1

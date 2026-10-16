@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomTransition
   transitionObject: {fileID: 432025252}
-  transition: {fileID: 283306084}
+  animator: {fileID: 0}
 --- !u!61 &432025255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2709,7 +2709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomTransition
   transitionObject: {fileID: 1576643294}
-  transition: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!61 &1576643296
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4437,8 +4437,8 @@ Transform:
   m_GameObject: {fileID: 2074575429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.84, y: -0.39, z: 0}
-  m_LocalScale: {x: 0.48666546, y: 0.46748623, z: 1}
+  m_LocalPosition: {x: 7.0673, y: -0.416, z: 0}
+  m_LocalScale: {x: 1.257203, y: 1.2494504, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4504,17 +4504,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.007229224, y: -0.003637135}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.72, y: 3.15}
+    oldSize: {x: 0.59, y: 1.13}
     newSize: {x: 1.72, y: 3.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.72, y: 3.15}
+  m_Size: {x: 0.6210933, y: 1.134961}
   m_EdgeRadius: 0
 --- !u!212 &2074575435
 SpriteRenderer:
@@ -4565,7 +4565,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5308656979867984444, guid: cb7eb7bfd7f481943b1febb3f7f1cca5, type: 3}
+  m_Sprite: {fileID: -2112039209454687454, guid: 660745fc2cfc8554ea8d47f3122329e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

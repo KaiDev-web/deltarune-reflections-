@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: bc59c7f519e633e4f913dd57530cf74f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2488054437627601727
+    second: krisHouse_0
+  - first:
+      213: -605023818937575946
+    second: krisHouse_1
+  - first:
+      213: 4562958485838521546
+    second: krisHouse_2
+  - first:
+      213: 9151084765055017586
+    second: krisHouse_3
+  - first:
+      213: 5560447354793881532
+    second: krisHouse_4
+  - first:
+      213: 7953153787754079053
+    second: krisHouse_5
+  - first:
+      213: -5304322492685432031
+    second: krisHouse_6
+  - first:
+      213: 5866168523638856816
+    second: krisHouse_7
+  - first:
+      213: 1727545476672519699
+    second: krisHouse_8
+  - first:
+      213: -1467681605399188952
+    second: krisHouse_9
+  - first:
+      213: -2139308256920149094
+    second: krisHouse_10
+  - first:
+      213: -3877706291877465982
+    second: krisHouse_11
+  - first:
+      213: 4598116675012345557
+    second: krisHouse_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: krisHouse_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 588
+        height: 576
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33a0a82458578220800000000000000
+      internalID: 2488054437627601727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5cf39c5bb233fbb47bc5afd371c10192
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      krisHouse_0: 2488054437627601727
+      krisHouse_1: -605023818937575946
+      krisHouse_10: -2139308256920149094
+      krisHouse_11: -3877706291877465982
+      krisHouse_12: 4598116675012345557
+      krisHouse_2: 4562958485838521546
+      krisHouse_3: 9151084765055017586
+      krisHouse_4: 5560447354793881532
+      krisHouse_5: 7953153787754079053
+      krisHouse_6: -5304322492685432031
+      krisHouse_7: 5866168523638856816
+      krisHouse_8: 1727545476672519699
+      krisHouse_9: -1467681605399188952
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
