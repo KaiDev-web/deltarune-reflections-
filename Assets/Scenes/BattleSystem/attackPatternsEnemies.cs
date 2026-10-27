@@ -54,7 +54,7 @@ public class attackPatternsEnemies : MonoBehaviour
 
     public void Start()
     {
-        descriptionBattle.gameObject.SetActive(true);
+        descriptionBattle.gameObject.SetActive(false);
         noelleUnder.gameObject.SetActive(true);
         noelleUp.gameObject.SetActive(false);
         battleSystem.enabled = false;
@@ -107,17 +107,18 @@ public class attackPatternsEnemies : MonoBehaviour
     public IEnumerator AttackTime()
     {
         float timer = 0f;
+        
+        if (attackDisVessel2)
+        {
+            StartCoroutine(AttackDis2());
+            if (attack != null) attack.gameObject.SetActive(false);
+        }
 
         while (timer < attackTime)
         {
-            if(attackDisVessel1 == true)
+            if (attackDisVessel1)
             {
                 AttackDis1();
-            }
-            else if(attackDisVessel2 == true)
-            {
-                StartCoroutine(AttackDis2());
-                attack.gameObject.SetActive(false);
             }
 
             timer += Time.deltaTime;
@@ -143,8 +144,6 @@ public class attackPatternsEnemies : MonoBehaviour
         krisUp.gameObject.SetActive(true);
         krisUnder.gameObject.SetActive(false);
 
-
-
         EndTurn();
     }
 
@@ -160,15 +159,7 @@ public class attackPatternsEnemies : MonoBehaviour
 
         battleSystem.enabled = false;
     }
-
-    public void AttackDis1()
-    {
-        if (target == null) return;
-
-        RecordTargetPosition();
-        MoveAlongHistory();
-    }
-
+    
     public IEnumerator AttackDis2()
     {
         yield return new WaitForSeconds(0f);
@@ -191,6 +182,15 @@ public class attackPatternsEnemies : MonoBehaviour
             }
         }
     }
+
+    public void AttackDis1()
+    {
+        if (target == null) return;
+
+        RecordTargetPosition();
+        MoveAlongHistory();
+    }
+    
 
     public void EndTurn()
     {

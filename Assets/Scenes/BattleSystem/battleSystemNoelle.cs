@@ -30,7 +30,9 @@ public class battleSystemNoelle : MonoBehaviour
     
     [Header("Check")]
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI textComponentNSpare;
     public string[] lines;
+    public string[] spareLines;
     public float textSpeed = 0.02f;
 
     private int index;
@@ -67,6 +69,7 @@ public class battleSystemNoelle : MonoBehaviour
     public TextMeshProUGUI CheckenemyTextN;
     public TextMeshProUGUI SpareenemyTextN;
     public TextMeshProUGUI DefendeenemyTextN;
+    public TextMeshProUGUI spareDesc;
     public float waitSeconds = 1.5f;
     public GameObject noelleUnder;
     public GameObject noelleUp;
@@ -74,6 +77,7 @@ public class battleSystemNoelle : MonoBehaviour
     public void Awake()
     {
         textComponent.text = string.Empty;
+        textComponentNSpare.text = string.Empty;
     }
 
     public void Start()
@@ -110,6 +114,7 @@ public class battleSystemNoelle : MonoBehaviour
         FightenemyTextN.gameObject.SetActive(false);
         ActenemyTextN.gameObject.SetActive(false);
         CheckenemyTextN.gameObject.SetActive(false);
+        spareDesc.gameObject.SetActive(false);
         item1N.gameObject.SetActive(false);
 
         descriptionBattleN.gameObject.SetActive(true);
@@ -152,6 +157,8 @@ public class battleSystemNoelle : MonoBehaviour
             actN.gameObject.SetActive(true);
             fightnormN.gameObject.SetActive(true);
             actnormN.gameObject.SetActive(false);
+            descriptionBattleN.gameObject.SetActive(false);
+            Debug.Log("Descrizione coperta");
             StartCoroutine(Act());
             PlaySound();
         }
@@ -166,6 +173,7 @@ public class battleSystemNoelle : MonoBehaviour
                 ActenemyTextN.gameObject.SetActive(false);
                 noelleUnder.gameObject.SetActive(true);
                 noelleUp.gameObject.SetActive(false);
+                descriptionBattleN.gameObject.SetActive(false);
                 PassToEnemyTurn();
                 PlaySound();
             }
@@ -257,14 +265,6 @@ public class battleSystemNoelle : MonoBehaviour
             StartCoroutine(Item());
             PlaySound();
         }
-        else if (Keyboard.current.zKey.wasPressedThisFrame && item1N.gameObject.activeSelf)
-        {
-            PlaySound();
-            item1HearthN.gameObject.SetActive(false);
-            item1N.gameObject.SetActive(false);
-            textComponentN.gameObject.SetActive(true);
-            StartCoroutine(DescriptionItem());
-        }
         else if (Keyboard.current.zKey.wasPressedThisFrame && itemN.gameObject.activeSelf)
         {
             PlaySound();
@@ -319,12 +319,15 @@ public class battleSystemNoelle : MonoBehaviour
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame && SpareenemyHearthN.gameObject.activeSelf)
         {
-            PlaySound();
-            noelleUnder.gameObject.SetActive(true);
-            noelleUp.gameObject.SetActive(false);
-            SpareenemyHearthN.gameObject.SetActive(false);
-            SpareenemyTextN.gameObject.SetActive(false);
-            PassToEnemyTurn();
+                descriptionBattleN.gameObject.SetActive(false);
+                spareDesc.gameObject.SetActive(true);
+                StartCoroutine(TypeSpareLine());
+                PlaySound();
+                noelleUnder.gameObject.SetActive(true);
+                noelleUp.gameObject.SetActive(false);
+                SpareenemyHearthN.gameObject.SetActive(false);
+                SpareenemyTextN.gameObject.SetActive(false);
+                PassToEnemyTurn();
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame && spareN.gameObject.activeSelf)
         {
@@ -415,8 +418,8 @@ public class battleSystemNoelle : MonoBehaviour
 
         descriptionItem12.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.01f);
-        attackPatternsEnemies.enabled = true;
         CureAll(1);
+        attackPatternsEnemies.enabled = true;
         
 
     }
@@ -437,7 +440,17 @@ public class battleSystemNoelle : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
     }
+    
+    public IEnumerator TypeSpareLine()
+    {
+        textComponentNSpare.text = string.Empty;
 
+        foreach (char c in spareLines[index].ToCharArray())
+        {
+            textComponentNSpare.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
 
     public IEnumerator Item()
     {

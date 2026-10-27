@@ -20,7 +20,9 @@ public class battleSystem : MonoBehaviour
 
     [Header("Check")]
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI textComponentSpare;
     public string[] lines;
+    public string[] spareLines;
     public float textSpeed = 0.02f;
 
     [Header("Item")]
@@ -61,6 +63,7 @@ public class battleSystem : MonoBehaviour
     public TextMeshProUGUI descriptionBattle;
     public TextMeshProUGUI ActenemyText;
     public TextMeshProUGUI CheckenemyText;
+    public TextMeshProUGUI spareEnemyText;
     public TextMeshProUGUI SpareenemyText;
     public TextMeshProUGUI DefendeenemyText;
     public float waitSeconds = 1.5f;
@@ -72,6 +75,7 @@ public class battleSystem : MonoBehaviour
     public void Awake()
     {
         textComponent.text = string.Empty;
+        textComponentSpare.text = string.Empty;
     }
 
     public void Start()
@@ -109,6 +113,7 @@ public class battleSystem : MonoBehaviour
         FightenemyText.gameObject.SetActive(false);
         ActenemyText.gameObject.SetActive(false);
         CheckenemyText.gameObject.SetActive(false);
+        spareEnemyText.gameObject.SetActive(false);
         item1.gameObject.SetActive(false);
         DefendeenemyText.gameObject.SetActive(false);
 
@@ -117,7 +122,6 @@ public class battleSystem : MonoBehaviour
 
     void Update()
     {
-
         if (Keyboard.current.zKey.wasPressedThisFrame && FightenemyHearth.gameObject.activeSelf)
         {
             PlaySound();
@@ -130,6 +134,7 @@ public class battleSystem : MonoBehaviour
             FightenemyHearth.gameObject.SetActive(true);
             FightenemyText.gameObject.SetActive(true);
             descriptionBattle.gameObject.SetActive(false);
+            spareEnemyText.gameObject.SetActive(false);
             leftArrow = false;
             rightArrow = false;
             PlaySound();
@@ -137,6 +142,8 @@ public class battleSystem : MonoBehaviour
         else if (Keyboard.current.leftArrowKey.wasPressedThisFrame && fight.gameObject.activeSelf)
         {
             fight.gameObject.SetActive(false);
+            descriptionBattle.gameObject.SetActive(true);
+            spareEnemyText.gameObject.SetActive(false);
             defence.gameObject.SetActive(true);
             fightnorm.gameObject.SetActive(true);
             defencenorm.gameObject.SetActive(false);
@@ -167,9 +174,8 @@ public class battleSystem : MonoBehaviour
            
             if (ActenemyText.gameObject.activeSelf)
             {
-                CheckenemyText.gameObject.SetActive(true);
-                StartCoroutine(TypeLine());
                 ActenemyHearth.gameObject.SetActive(false);
+                spareEnemyText.gameObject.SetActive(false);
                 ActenemyText.gameObject.SetActive(false);
                 StartCoroutine(WaitToNoelle());
                 PlaySound();
@@ -433,6 +439,7 @@ public class battleSystem : MonoBehaviour
         FightenemyHearth.gameObject.SetActive(false);
         FightenemyText.gameObject.SetActive(false);
         descriptionBattle.gameObject.SetActive(true);
+        spareEnemyText.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.3f);
         this.enabled = false;
     }
